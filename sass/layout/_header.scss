@@ -8,18 +8,32 @@
     align-items: center;
 }
 
+
 // Navigation list
 
 .naviganion {
         display: flex;
-        align-items: center;}
+        align-items: center;
+        display: none;
+        @media screen and (min-width: 768px){
+            display: block;
+        }
+    }
 
 .page-header {
     display: flex;
-    align-items: center;}
+    align-items: center;
+    }
 
 .header-list{
-    margin-left: 90px;}
+    @media screen and (min-width: 768px) {
+            margin-left: 80px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            margin-left: 90px;
+        }
+    }
 
 .page-header__item {
     position: relative;
@@ -42,10 +56,12 @@
 }
 
 .page-header__link {
+    @media screen and (min-width: 768px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+    
+        }
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
     &:hover,&:focus{
         color: var(--active-color-change);
     }   
@@ -65,12 +81,24 @@
 
 
 .menu-info {
-    display: flex;
-    align-items: center;
+  
+    display: none;
 
-    &__link{
+    @media screen and (min-width: 768px){
+        display: block;
+    }
+
+    @media screen and (min-width: 1200px){
         display: flex;
         align-items: center;
+    }
+
+    &__link{
+        @media screen and (min-width: 1200px){
+            display: flex;
+            align-items: center;
+        }
+        
         padding-top: 32px;
         padding-bottom: 32px;
     
@@ -94,15 +122,37 @@
     }
 
     &__icon{
-        margin-right: 10px;
+        @media screen and (min-width: 768px) {
+                margin-right: 8px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                margin-right: 10px;
+            }
+        }
+        
     }
-}
 
-.header-info {
-    margin-left: 300px;}
 
-.menu-info__item+ .menu-info__item {
-    margin-left: 30px; }
+ .header-info {
+    @media screen and (min-width: 768px) {
+            margin-left: 84px;
+            white-space: nowrap;
+        }
+    @media screen and (min-width: 1200px) {
+            margin-left: 300px;}
+    }
+
+    .menu-info__item{
+        margin-bottom: 10px;
+        &+&{ 
+            @media screen and (min-width: 1200px) {
+                    margin-left: 30px;
+                }
+        }
+    }
+ 
+      
 
 
 

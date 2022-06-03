@@ -20,8 +20,13 @@
 
     <header class="header">
         <div class="container">
+            <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span></a>
+            <button type="button" class="mob-btn open">
+                <svg class="menu__open" width="40" height="40">
+                    <use href="./images/icons.svg/icon.svg#icon-menu_mobile"></use>
+                </svg>
+            </button>
             <nav class="naviganion">
-                <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span></a>
                 <ul class="page-header header-list">
                     <li class="page-header__item">
                         <a href="./index.html" class="page-header__link ">Студия</a>
@@ -52,6 +57,61 @@
                 </li>
             </ul>
         </div>
+        <!-- мобільне меню -->
+        <div class="mob-menu is-hidden">
+            <div class="mob-menu__container">
+                <div class="mob-menu-top">
+                    <button type="button" class="mob-btn close ">
+                        <svg class="menu_mob__close" width="40" height="40">
+                            <use href="./images/icons.svg/icon.svg#icon-close-mob"></use>
+                        </svg>
+                    </button>
+    
+                    <ul class="mob-page-header ">
+                        <li class="mob-page-header__item">
+                            <a href="./index.html" class="mob-page-header__link ">Студия</a>
+                        </li>
+                        <li class="mob-page-header__item">
+                            <a href="./portfolio.html" class="mob-page-header__link current">Портфолио</a>
+                        </li>
+                        <li class="mob-page-header__item">
+                            <a href="" class="mob-page-header__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mob-menu-bottom">
+                    <ul class="mob-menu-info">
+                        <li class="mob-menu-info__item">
+                            <a class="mob-menu-info__link tel" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+    
+                        <li class="mob-menu-info__item">
+                            <a class="mob-menu-info__link " href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+    
+    
+                    <ul class="mob-soc">
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link" href="Instagram">Instagram</a>
+                        </li>
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link" href="Twitter">Twitter</a>
+                        </li>
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link" href="Facebook">Facebook</a>
+                        </li>
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link" href="LinkedIn">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!--Секція герой-->
@@ -61,17 +121,22 @@
         <div class="container">
             <h1 class="portfolio-hero-h1">Партфолио</h1>
                 <ul class="portfolio-hero-batton ">
-                    <li class="portfolio-hero-link"> <button class="button-hero " type="button">Все</button> </li>
-                    <li class="portfolio-hero-link"> <button class="button-hero " type="button">Веб-сайты</button> </li>
-                    <li class="portfolio-hero-link"> <button class="button-hero " type="button">Приложения</button> </li>
-                    <li class="portfolio-hero-link"> <button class="button-hero" type="button">Дизайн</button></li>
-                    <li class="portfolio-hero-link"> <button class="button-hero" type="button">Маркетинг</button> </li>
+                    <li class="btn-portfolio"> <button class="button-hero " type="button">Все</button> </li>
+                    <li class="btn-portfolio"> <button class="button-hero " type="button">Веб-сайты</button> </li>
+                    <li class="btn-portfolio"> <button class="button-hero " type="button">Приложения</button> </li>
+                    <li class="btn-portfolio"> <button class="button-hero" type="button">Дизайн</button></li>
+                    <li class="btn-portfolio"> <button class="button-hero" type="button">Маркетинг</button> </li>
                 </ul>
                 <ul class="portfolio-hero-list">
                     <li class="portfolio-hero-item"> 
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto1.jpg" alt="проэкт1" width="370" >
+                                <img 
+                                srcset="./images/foto1.jpg 1px,
+                                        ./images/foto1-2x.jpg 2x"
+                                    class="portfolio-hero-img" 
+                                    src="./images/foto1.jpg" 
+                                    alt="проэкт1" />
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                         исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -84,7 +149,12 @@
                     <li class="portfolio-hero-item">
                     <a class="portfolio-hero-link" href="">
                         <div class="portfilio-hero-wrap">
-                            <img class="portfolio-hero-img" src="./images/foto2.jpg" alt="проэкт2" width="370">
+                            <img 
+                            srcset="./images/foto2.jpg 1px,
+                                    ./images/foto2-2x.jpg 2x"
+                            class="portfolio-hero-img" 
+                            src="./images/foto2.jpg" 
+                            alt="проэкт2" />
                                 <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="portfolio-hero-content">
@@ -96,7 +166,12 @@
                     <li class="portfolio-hero-item">
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto3.jpg" alt="проэкт3" width="370">
+                                <img 
+                                srcset="./images/foto3.jpg 1px,
+                                        ./images/foto3-2x.jpg 2x"
+                                class="portfolio-hero-img"
+                                src="./images/foto3.jpg" 
+                                alt="проэкт3" />
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                     это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -109,7 +184,12 @@
                     <li class="portfolio-hero-item">
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto4.jpg" alt="проэкт4" width="370">
+                                <img
+                                srcset="./images/foto4.jpg 1px,
+                                        ./images/foto4-2x.jpg 2x"
+                                class="portfolio-hero-img" 
+                                src="./images/foto4.jpg" 
+                                alt="проэкт4" />
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -122,7 +202,12 @@
                     <li class="portfolio-hero-item">
                     <a class="portfolio-hero-link" href="">
                         <div class="portfilio-hero-wrap">
-                            <img class="portfolio-hero-img" src="./images/foto5.jpg" alt="проэкт5" width="370">
+                            <img
+                            srcset="./images/foto5.jpg 1px,
+                                    ./images/foto5-2x.jpg 2x"
+                            class="portfolio-hero-img" 
+                            src="./images/foto5.jpg" 
+                            alt="проэкт5"/>
                                 <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                     это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
@@ -135,7 +220,12 @@
                     <li class="portfolio-hero-item">
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto6.jpg" alt="проэкт6" width="370">
+                                <img
+                                srcset="./images/foto6.jpg 1px,
+                                        ./images/foto6-2x.jpg 2x"
+                                class="portfolio-hero-img"
+                                src="./images/foto6.jpg"
+                                alt="проэкт6" />
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                     это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -148,7 +238,12 @@
                     <li class="portfolio-hero-item">
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto7.jpg" alt="проэкт7" width="370">
+                                <img 
+                                srcset="./images/foto7.jpg 1px,
+                                        ./images/foto7-2x.jpg 2x"
+                                class="portfolio-hero-img" 
+                                src="./images/foto7.jpg" 
+                                alt="проэкт7" />
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                     это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -161,7 +256,12 @@
                     <li class="portfolio-hero-item">
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto8.jpg" alt="проэкт8" width="370">
+                                <img
+                                srcset="./images/foto8.jpg 1px,
+                                        ./images/foto8-2x.jpg 2x"
+                                class="portfolio-hero-img"
+                                src="./images/foto8.jpg" 
+                                alt="проэкт8" />
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                     это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -174,7 +274,12 @@
                     <li class="portfolio-hero-item">
                         <a class="portfolio-hero-link" href="">
                             <div class="portfilio-hero-wrap">
-                                <img class="portfolio-hero-img" src="./images/foto9.jpg" alt="проэкт9" width="370">
+                                <img
+                                srcset="./images/foto9.jpg 1px,
+                                        ./images/foto9-2x.jpg 2x"
+                                class="portfolio-hero-img" 
+                                src="./images/foto9.jpg" 
+                                alt="проэкт9" >
                                     <p class="portfolio-hero-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                     это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                             </div>
@@ -194,50 +299,52 @@
 
     <footer class="section-footer footer">
         <div class="container">
-            <div class="footer-nav nivigation-footer">
-                <a class="logo" href="./index.html"> Web<span class="logo-footer">Studio</span></a>
-                <address class="footer-nav__address">г. Киев, пр-т Леси Украинки, 26</address>
-                <ul class="footer-info">
-                    <li class="footer-info__item">
-                        <a class="footer-info__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li class="footer-info__item">
-                        <a class="footer-info__link" href="tel:+380961111111">+38 096 111 11 11</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-social-container">
-                <h3 class="footer-social-container__title footer-title">присоединяйтесь</h3>
-                <ul class="social-media">
-                    <li class="social-media__item">
-                        <a href="" class="social-media__link social-media__link--gray">
-                            <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/icons.svg/icon.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-media__item">
-                        <a class="social-media__link social-media__link--gray" href="">
-                            <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/icons.svg/icon.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-media__item">
-                        <a class="social-media__link social-media__link--gray" href="">
-                            <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/icons.svg/icon.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-media__item">
-                        <a class="social-media__link social-media__link--gray" href="">
-                            <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/icons.svg/icon.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+            <div class="section-footer__grid">
+                <div class="footer-nav nivigation-footer">
+                    <a class="logo" href="./index.html"> Web<span class="logo-footer">Studio</span></a>
+                    <address class="footer-nav__address">г. Киев, пр-т Леси Украинки, 26</address>
+                    <ul class="footer-info">
+                        <li class="footer-info__item">
+                            <a class="footer-info__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="footer-info__item">
+                            <a class="footer-info__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-social-container">
+                    <h3 class="footer-social-container__title footer-title">присоединяйтесь</h3>
+                    <ul class="social-media">
+                        <li class="social-media__item">
+                            <a href="" class="social-media__link social-media__link--gray">
+                                <svg class="social-media-icon" width="20" height="20">
+                                    <use href="./images/icons.svg/icon.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-media__item">
+                            <a class="social-media__link social-media__link--gray" href="">
+                                <svg class="social-media-icon" width="20" height="20">
+                                    <use href="./images/icons.svg/icon.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-media__item">
+                            <a class="social-media__link social-media__link--gray" href="">
+                                <svg class="social-media-icon" width="20" height="20">
+                                    <use href="./images/icons.svg/icon.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-media__item">
+                            <a class="social-media__link social-media__link--gray" href="">
+                                <svg class="social-media-icon" width="20" height="20">
+                                    <use href="./images/icons.svg/icon.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <form class="footer-form">
                 <label class="footer-form__label" for="footer-user-mail">Подпишитесь на рассылку</label>
@@ -253,6 +360,7 @@
             </form>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
