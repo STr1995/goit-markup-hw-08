@@ -1206,11 +1206,6 @@ p {
   margin-bottom: 50px;
   margin-top: 0;
 }
-@media screen and (min-width: 1200px) {
-  .section-team__title {
-    width: calc(25% - 30px);
-  }
-}
 
 .team-list {
   margin-bottom: -30px;
