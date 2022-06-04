@@ -16,6 +16,7 @@
 }
 
 .benefits-list {
+    margin-bottom: -30px;
     @media screen and (min-width: 768px) {
         
         display: flex;
@@ -25,7 +26,8 @@
 
      &__item{
         text-align: center;
-        margin-bottom: 30px;
+        &:not(:last-child){margin-bottom: 30px;}
+        
     @media screen and (min-width: 768px) {
             text-align: start;
             width: calc(100% / 2 - 30px);

@@ -3,15 +3,20 @@
 }
 
 .btn-portfolio{
-    &:not(:last-child) {
-            margin-right: 8px;
-            margin-bottom: 15px;
-        }
-    
-        display: block;
-        transition-property:box-shadow;
-        transition-duration:250ms;
+    display: block;
+        transition-property: box-shadow;
+        transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:not(:last-child) {
+        margin-right: 8px;}
+
+        @media not screen and (min-width: 768px){&:not(:last-child) {
+            margin-bottom: 15px;
+        }}
+}
+
+.btn-portfolio:nth-child(4){
+    margin-bottom: 0;
 }
 
 .portfolio-hero {
@@ -39,11 +44,12 @@
             border-left: 1px solid #EEEEEE;}
 
     &-item{
-        @media screen and (min-width: 480px) {
+        @media not screen and (min-width: 768px) {
             width: 450px;
-            &:not(:last-child){
-                margin-bottom: 30px;
-            }}
+             &:not(:last-child){
+                 margin-bottom: 30px;
+              } 
+            }
         
         @media screen and (min-width: 768px) {
             width: calc(100% / 2 - 30px);

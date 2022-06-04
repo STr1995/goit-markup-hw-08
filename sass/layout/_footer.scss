@@ -10,17 +10,22 @@
  .footer .container {
     @media screen and (min-width: 1200px){
             display: flex;
-             align-items: baseline;}
+             align-items: center;}
       }
 
 .section-footer__grid{
+    @media screen and (min-width: 480px){margin-bottom: 60px;}
+    
     @media screen and (min-width: 768px) {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
         }
     
-    
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+        margin-bottom: 0;
+    }
 }
 
 .footer-title {
@@ -36,15 +41,18 @@
 
 .nivigation-footer {
     text-align: center;
-    min-width: 231px;
-    margin-bottom: 60px;
-
-    @media screen and (min-width: 768px) {
-            margin-right: 165px;
+    @media screen and (min-width: 480px) {
+        margin-bottom: 60px;
         }
 
+    @media screen and (min-width: 768px) {
+         margin-bottom: 0; 
+     }
+
     @media screen and (min-width: 1200px){
-        margin-right: 70px;
+         margin-bottom: 0;
+         margin-right: 70px;
+         text-align: start;
     }
     
 }
@@ -92,11 +100,11 @@
 }
 
 .footer-social-container {
-    min-width: 206px;
-    margin-bottom: 60px;
+    // min-width: 206px;
+    
 
     @media screen and (min-width: 1200px) {
-            margin-right: 93px;
+            // margin-right: 93px;
         }
 
     &__title{
@@ -130,7 +138,7 @@
      text-align: center;
 
     @media screen and (min-width: 1200px) {
-            margin-right: 93px;
+            // margin-right: 93px;
             display: flex;
             height: 50px;
         }
